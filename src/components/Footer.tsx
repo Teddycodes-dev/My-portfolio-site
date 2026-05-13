@@ -20,9 +20,7 @@ export function Footer() {
             <a href="#services" className="transition hover:text-black">
               Services
             </a>
-            <a href="#blog" className="transition hover:text-black">
-              Blog
-            </a>
+
           </div>
           <a href="https://wa.link/ce2n9w" className="underline underline-offset-4 transition hover:text-black">
            Get in Touch

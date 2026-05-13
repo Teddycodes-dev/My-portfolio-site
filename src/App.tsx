@@ -1,4 +1,3 @@
-import { BlogSection } from "./components/BlogSection";
 import { Footer } from "./components/Footer";
 import { HeroSection } from "./components/HeroSection";
 import { ServicesSection } from "./components/ServicesSection";
@@ -10,8 +9,8 @@ export default function App() {
       <HeroSection />
       <WorksSection />
       <ServicesSection />
-      <BlogSection />
       <Footer />
     </main>
   );
 }
+

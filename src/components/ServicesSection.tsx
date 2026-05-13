@@ -20,6 +20,7 @@ const services: Service[] = [
   },
 ];
 
+
 export function ServicesSection() {
   return (
     <section id="services" className="mx-auto w-full max-w-6xl px-6 pb-20">
@@ -33,19 +34,39 @@ export function ServicesSection() {
         </div>
 
         <div className="flex flex-1 flex-wrap gap-4">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.name}
-              initial={{ opacity: 0, x: 18 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.45 }}
-              transition={{ delay: index * 0.07, duration: 0.45 }}
-              className="flex min-h-[180px] flex-1 basis-[260px] flex-col justify-between border border-black/15 bg-white/50 p-6"
-            >
-              <h3 className="text-2xl tracking-tight">{service.name}</h3>
-              <p className="text-black/70">{service.detail}</p>
-            </motion.div>
-          ))}
+          {services.map((service, index) => {
+            const isCommerce = service.name === "E-Commerce Development";
+
+            return (
+              <motion.div
+                key={service.name}
+                initial={{ opacity: 0, x: 18 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.45 }}
+                transition={{ delay: index * 0.07, duration: 0.45 }}
+                className="flex min-h-[180px] flex-1 basis-[260px] flex-col justify-between border border-black/15 bg-white/50 p-6"
+              >
+                {isCommerce ? (
+                  <a
+                    href="#ecommerce"
+                    className="group block"
+                    aria-label={`Jump to e-commerce section: ${service.name}`}
+                  >
+                    <h3 className="text-2xl tracking-tight group-hover:underline group-hover:underline-offset-4">
+                      {service.name}
+                    </h3>
+                    <p className="mt-2 text-black/70">{service.detail}</p>
+                  </a>
+                ) : (
+                  <>
+                    <h3 className="text-2xl tracking-tight">{service.name}</h3>
+                    <p className="text-black/70">{service.detail}</p>
+                  </>
+                )}
+              </motion.div>
+            );
+          })}
+
         </div>
       </div>
     </section>

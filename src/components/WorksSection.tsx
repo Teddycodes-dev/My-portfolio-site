@@ -16,6 +16,7 @@ const works: Work[] = [
     year: "2026",
     summary: "Custom storefront, filtered catalog, secure checkout, and CMS-managed campaigns.",
     stack: ["React", "Node", "Stripe"],
+    url: "https://e-commerce-portfolio-indol.vercel.app/",
   },
   {
     title: "Growth Agency Multi-Page Website",
@@ -31,6 +32,7 @@ const works: Work[] = [
     year: "2025",
     summary: "Conversion-focused launch page with lead capture and performance-first build.",
     stack: ["Vite", "TypeScript", "Analytics"],
+    url: "https://saas-repo-lac.vercel.app/",
   },
 ];
 
